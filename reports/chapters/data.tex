@@ -44,6 +44,15 @@ general genre recommendation will lead to poor results.
     \label{fig:dataanalysis:avg_movie_ratings}% 
 \end{minipage}
 
+\end{multicols*}
+\begin{minipage}{\linewidth}
+    \centering% 
+    \includegraphics[scale=0.6]{assets/genre_corr_heatmap.png}% 
+    \figcaption{Average genre ratings}% 
+    \label{fig:dataanalysis:correlation}% 
+\end{minipage}
+\begin{multicols*}{2}
+
 From user rating on figure~\ref{fig:dataanalysis:avg_movie_ratings} we can
 learn interesting properties as well. For instance, the rating distribution
 seem to be normal except some outliers. But these outlieres are not random as
@@ -51,26 +60,16 @@ well. They tend to reflect that users prefer to give \textit{pretty} numbers as
 ratings. For instance, integer numbers, or half-numbers like \(1.5\) or
 \(2.5\).
 
-\begin{minipage}{\linewidth}
-    \centering% 
-    \includegraphics[scale=0.3]{assets/genre_candle_rating.png}% 
-    \figcaption{Genres rating candles}% 
-    \label{fig:dataanalysis:rating_candles}% 
-\end{minipage}
-
 Moreover, candlesticks plots show that while Film-Noir tends to be very rare
 genre, even lowest ratings are high. However, the horror movies tend to have
 very large ratings gap. Even though most of the grades are relatively low,
 leading to low average.
 
-\begin{multicols*}{2}
-\end{multicols*}
-\end{multicols*}
 \begin{minipage}{\linewidth}
     \centering% 
-    \includegraphics[scale=0.6]{assets/genre_corr_heatmap.png}% 
-    \figcaption{Average genre ratings}% 
-    \label{fig:dataanalysis:correlation}% 
+    \includegraphics[scale=0.3]{assets/genre_candle_rating.png}% 
+    \figcaption{Genres rating candles}% 
+    \label{fig:dataanalysis:rating_candles}% 
 \end{minipage}
 
 Finally, we can consider the correlation data of the genres. This data mostly
@@ -80,12 +79,11 @@ often tend to be animation.
 
 The correlation data may seem redundant. However, carefully incorporating these
 properties into the model, we can try to learn the correlation. For instance,
-if a user prefers comedy a lot, most probably model should not recommend
-thrillers a lot.
+if a user prefers mostly comedy, probably model should not recommend thrillers
+a lot.
 
 Finally, successfully learning the properties we discovered in the data, we can
 properly build the model, learning these patterns and improving overall
 performance. Consequently, we can proceed to the model implementation in the
-next chapter. \newpage
+next chapter.
 
-\begin{multicols*}{2}

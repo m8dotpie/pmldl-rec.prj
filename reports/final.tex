@@ -4,6 +4,10 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage[backend=biber,style=ieee,autocite=inline]{biblatex}
+
+\bibliography{ref.bib}
 
 \title{Movie Recommender System}
 \author{Igor Alentev \\ i.alentev@innopolis.university}
@@ -17,20 +21,21 @@
 
 \begin{multicols*}{2}
 
-    \include{chapters/intro}
+    \input{chapters/intro}
 
-    \include{chapters/data}
+    \input{chapters/data}
 
-    \include{chapters/impl}
+    \input{chapters/impl}
 
-    \include{chapters/advdisadv}
-
-    \include{chapters/train}
-
-    \include{chapters/eval}
-
-    \include{chapters/res}
+    \input{chapters/advdisadv}
+    \pagebreak
+    \input{chapters/train}
+    \input{chapters/eval}
+    \pagebreak
+    \input{chapters/res}
 
 \end{multicols*}
+
+\printbibliography[heading=bibintoc,title={Bibliography cited}]
 
 \end{document}

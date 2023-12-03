@@ -1,1 +1,45 @@
 \section{Evaluation}
+
+\begin{equation}
+    \text{Recall} = \frac{TP}{TP + FP}
+\end{equation}
+
+\begin{equation}
+    \text{Precision} = \frac{TP}{TP + FN}
+\end{equation}
+
+These are standard metrics for models, but we need a particular modification
+\textit{Recall@K} and \textit{Precision@K}. It means, that we are interested in
+proportion of relevant items in the top-K predictions (recommendations) given
+by our solution.
+
+Another important metric is Discounted Cumulative Gain (DCG). The main purpose
+of the metric is to consider the order of recommendations. For instance, how
+relevant and how high in the recommendation list the result is.
+
+\begin{equation}
+    \text{DCG}_\text{p} = \sum_{i = 1}^p \frac{2^{rel_i} - 1}{\log_2{(i + 1)}}
+\end{equation}
+
+p: a particular rank position
+
+$rel_i \in \{0, 1\}$ : graded relevance of the result at position $i$
+
+Further extension is Idealised Dicounted Cumulative Gain (IDCG), namely the
+maximum possible DCG, at rank position $p$.
+
+\begin{equation}
+    \text{IDCG}_\text{p} = \sum_{i = 1}^{|REL_p|} \frac{2^{rel_i} - 1}{\log_2{(i + 1)}}
+\end{equation}
+
+$|REL_p|$ : list of items ordered by their relevance up to position p
+
+Finally, the actual metric we are going to use, concludes the DCP extension and
+is formulated as Normalized
+DCG~\cite{jeunenNormalisedDiscountedCumulative2023}\@.
+
+\begin{equation}
+    \text{nDCG}_\text{p} = \frac{\text{DCG}_p}{\text{iDCG}_p}
+\end{equation}
+
+This concludes the evaluation information of the proposed solution.

@@ -1,1 +1,34 @@
-\section{Training Process}
+\section{Training Process}~\label{training-process}
+
+Since we have already discussed the model architecture, loss, there not much
+left. Evaluation will be considered in further chapters, so here we will rather
+focus on the process of training itself.
+
+Firstly, we need to consider the learning constants which were used during the
+training process.
+
+\begin{verbatim}
+    epochs = 1e4
+    batch_size = 2^10
+    lr = 1e-3
+    lambda = 1e-6
+\end{verbatim}
+
+Moreover, I am using mini-batch sampling for feeding the training data to the
+\textit{GNN}. Sampling is very important for proper learning process.
+
+In detail, sampling should be done in a very accurate way. The role of negative
+sampling~\cite{yangUnderstandingNegativeSampling2020} is particularly
+important. For instalnce, the idea behind is pretty similar. Remembering the
+class imbalance depicted on figure~\ref{fig:dataanalysis:genre_distr}, we have
+to deal somehow with it. One of the ideas is to build \textit{anti-graph} ---
+graph on \textit{anti-edges} (non-existent edges). Sampling from both graphs we
+can try to bridge the gap in the data.
+
+This tricky sampling strategy allows to build a proper recommender solution.
+
+The split proportions are \(80/10/10\) for training, validation, test,
+correspondingly.
+
+In general these are all specific implementation details of the training
+process.
