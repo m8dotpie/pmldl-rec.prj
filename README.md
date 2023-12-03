@@ -1,10 +1,10 @@
 # pmldl-rec.prj
 
-Author: Igor Alentev
+Author: `Igor Alentev`
 
-Email: i.alentev@innopolis.university
+Email: `i.alentev@innopolis.university`
 
-Group: BS20-RO-01
+Group: `BS20-RO-01`
 
 --------------------------------------------------------------------------------
 
