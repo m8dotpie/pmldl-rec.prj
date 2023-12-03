@@ -1,1 +1,47 @@
-\section{Advantages and Disadvantages}
+\section{Considerations}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+    \item Firstly, I would like to point out the limitation of the data used. Even though
+          it is not the problem with the overall approach, it is worth mentioning. In
+          particular, the dataset has the genre imbalance as can be seen on
+          figure~\ref{fig:dataanalysis:genre_distr}, which is pretty important issue, but
+          is not addressed in this work.
+    \item One of the main limitations of \textit{GNN} is the inability of distinguishing
+          the different structures of the graphs. This issue is related to the graph
+          isomorphism. It is hard to say whether this concrete limitation affecting the
+          problem we are trying to solve. However, since we are considering graph
+          structures, we need to take into consideration every possible issue. Moreover,
+          one of the possible solutions if \textit{Graph Isomorphism
+              Network}~\cite{xuHowPowerfulAre2019}
+    \item I do not see any point in considering noise vulnerability of the \textit{GNN}s,
+          since this issue is clearly not related to the problem considered.
+    \item Furthermore, \textit{GNN}s suffer from time-space complexity issues. It is very
+          difficult to scale such a network. Number of edges in dense graph can reach up
+          to \(O(n^2)\). Therefore, all the computations difficulty and space
+          requirenments raise drastically.
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+    \item If the data represented in the natural for it form (i.e.~graphs), it allows to
+          capture difficult connections between the data nodes. Learning from not the
+          data itself, but the connections as well, allows for better accuracy and
+          overally better results.
+    \item Moreover, natural representation of the data increases the interpretability of
+          the processes behind the scenes, as well as, the interpretability of the final
+          results.
+    \item The overall generality of the approach allows to apply the theory to a wide
+          variety of the problems. Since many real-world structures can be respresented
+          as graphs, different interpretations are possible.
+          \begin{enumerate}
+              \item Convolution
+              \item Attention
+              \item LSTM
+              \item RNN
+              \item CV
+              \item and many others
+          \end{enumerate}
+\end{itemize}
