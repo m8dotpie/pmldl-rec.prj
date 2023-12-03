@@ -1,5 +1,9 @@
 \documentclass{article}
 \usepackage{multicol}
+\usepackage{nonfloat}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
 
 \title{Movie Recommender System}
 \author{Igor Alentev \\ i.alentev@innopolis.university}
@@ -11,22 +15,22 @@
 
 \newpage
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
 
-    \section{Introduction}
+    \include{chapters/intro}
 
-    \section{Data Analysis}
+    \include{chapters/data}
 
-    \section{Model Implementation}
+    \include{chapters/impl}
 
-    \section{Advantages and Disadvantages}
+    \include{chapters/advdisadv}
 
-    \section{Training Process}
+    \include{chapters/train}
 
-    \section{Evaluation}
+    \include{chapters/eval}
 
-    \section{Results}
+    \include{chapters/res}
 
-\end{multicols}
+\end{multicols*}
 
 \end{document}
