@@ -5,3 +5,8 @@
 *.synctex.gz
 data/raw/*
 *.out
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.toc
